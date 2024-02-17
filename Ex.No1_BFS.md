@@ -13,11 +13,24 @@ To write a python program to implement Breadth first Search.
 7.   Call the bfs function by passing arguments visited, graph and starting node.
 8.   Stop the program.
 ### Program:
-
-
-
-
-
+graph = {
+  '5' : ['3','7'],
+  '3' : ['2', '4'],
+  '7' : ['8'],
+  '2' : [],
+  '4' : ['8'],
+  '8' : []
+}
+visited = set() # Set to keep track of visited nodes of graph.
+def dfs(visited, graph, node):  #function for dfs 
+    if node not in visited:
+        print (node)
+        visited.add(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
+# Driver Code
+print("Following is the Depth-First Search")
+dfs(visited, graph, '5')
 
 
 
@@ -26,6 +39,7 @@ To write a python program to implement Breadth first Search.
 
 ### Output:
 
+![Screenshot 2024-02-17 112952](https://github.com/kalyanreddieee/AI_Lab_2023-24/assets/113888414/c0d60da3-26a2-472f-b767-772cf21cdfdb)
 
 
 ### Result:
